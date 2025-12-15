@@ -34,7 +34,7 @@ class FlyingRobot(BaseRobot):
                  name: str,
                  weight: int,
                  coords: list | None = None
-                 ):
+                 ) -> None:
         if coords is None :
             coords3 = [0, 0, 0]
         elif len(coords) == 2 :
@@ -46,10 +46,10 @@ class FlyingRobot(BaseRobot):
 
         self.coords = coords3.copy()
 
-    def go_up(self, step=1) -> None:
+    def go_up(self, step: int = 1) -> None:
         self.coords[2] += step
 
-    def go_down(self, step=1) -> None:
+    def go_down(self, step: int = 1) -> None:
         self.coords[2] -= step
 
 
